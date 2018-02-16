@@ -33,12 +33,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        meetups: [
-          { imageUrl: 'https://www.toronto.ca/wp-content/uploads/2017/07/9163-invest-in-toronto-995x330.png', id: 'abc', title: 'Meetup in Toronto' },
-          { imageUrl: 'https://www.travelgayasia.com/wp-content/uploads/2012/06/Soeul-City-Guide.jpg', id: 'def', title: 'Meetup in Seoul' }
-        ]
+     computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetups
       }
     },
     methods: {
