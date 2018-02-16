@@ -15,7 +15,7 @@
                 <v-card-title primary-title>
                   <div>
                     <h5 class="white--text mb-0">My Meetup</h5>
-                    <div>17th July 2017</div>
+                    <div>09th April 2018</div>
                   </div>
                 </v-card-title>
                 <v-card-actions>
