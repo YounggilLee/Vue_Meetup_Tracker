@@ -1,7 +1,7 @@
 <template>
   <v-app>
       <v-toolbar dark class="black">
-        <v-toolbar-side-icon @click="sideNav = !sideNav"
+        <v-toolbar-side-icon @click.stop="sideNav = !sideNav"
        ></v-toolbar-side-icon>
         <v-toolbar-title>
           <router-link
@@ -14,7 +14,6 @@
         <v-spacer></v-spacer>
         <v-toolbar-items>
           <v-btn flat v-for="item in menuItems" :key="item.title"
-                router
                 :to="item.link">
             <v-icon dark left>{{item.icon}}</v-icon>
            {{item.title}}
@@ -24,7 +23,6 @@
       <v-navigation-drawer temporary v-model="sideNav">
         <v-list>
           <v-list-tile v-for="item in menuItems" :key="item.title"
-                  router
                   :to="item.link">
           <v-list-tile-action>
             <v-icon>{{item.icon}}</v-icon>
